@@ -1,0 +1,31 @@
+<table class="table">
+    <tr>
+        <th class="columnsmall">Name</th>
+        <th class="columnsmall">Description</th>
+        <th class="columnsmall">Estimate</th>
+        <th class="columnsmall">State</th>
+    </tr>
+    <tr ng-repeat="task in model.tasklist">
+        <td class="columnsmall"> {{task.name}} </td>
+        <td class="columnsmall"> {{task.description}} </td>
+        <td class="columnsmall"> {{task.estimate}} </td>
+        <td class="columnsmall">
+            <select ng-model="task.state" ng-options="x for x in model.stateList" ng-change="model.changeData(task.id)"></select>
+        </td>
+        <td class="columnsmall"> <button ng-click="model.removeTask(task.id)">Remove</button></td>
+        <td class="columnsmall"> <button ng-disabled="!task.rowChanged" ng-click="model.updateTasks()">Save</button></td>
+    </tr>
+</table>
+
+<strong>Task Status </strong>
+<div>
+  <label> Progress: </label>
+  <input class="statusCount" ng-model="model.progressCount"/>
+  <br/>
+  <label> Pending: </label>
+  <input class="statusCount" ng-model="model.pendingCount"/>
+  <br/>
+  <label> Completed: </label>
+  <input class="statusCount" ng-model="model.completedCount"/>
+  <br/>
+</div>

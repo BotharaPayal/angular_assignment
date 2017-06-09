@@ -1,0 +1,15 @@
+body{
+	padding:10px;
+	background-color: #ccccbb;
+}
+
+label {
+	width: 150px;
+}
+.statusCount{
+	width: 60px;
+}
+
+.columnsmall{
+	width: 100px;
+}

@@ -1,0 +1,15 @@
+<div>
+  <label> Name </label>
+  <input ng-model="model.newtask.name"/>
+  <br/><br/>
+  <label> description </label>
+  <input ng-model="model.newtask.description"/>
+  <br/><br/>
+  <label> Estimate </label>
+  <input ng-model="model.newtask.estimate"/>
+  <br/><br/>
+  <label> State </label>
+  <select ng-model="model.newtask.state" ng-options="x for x in model.stateList"></select>
+  <br/><br/>
+  <button ng-click="model.addNewTask()">Add</button>
+</div>

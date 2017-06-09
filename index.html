@@ -1,0 +1,39 @@
+<html ng-app="tasks">
+
+<head>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-cloak>
+
+    <nav class="navbar navbar-default navbar-inverse" class="container-fluid">
+        <div>
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a class="navbar-brand" href="#/tasks">Task List</a>
+                    </li>
+                    <li>
+                        <a class="navbar-brand" href="#/newtask">Create Task</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <ng-view></ng-view>
+    </div>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="app/mainApp.js"></script>
+    <script src="app/taskFactory.js"></script>
+    <script src="app/taskList.component.js"></script>
+    <script src="app/addTask.component.js"></script>
+</body>
+
+</html>
